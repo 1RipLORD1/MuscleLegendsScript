@@ -1,0 +1,164 @@
+if game.placeId == 3623096087 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Rip_LORD Hub | 💪Muscle Legends", IntroText = "Rip_LORD Hub", SaveConfig = false, ConfigFolder = "Rip_LORD Coinfig"})
+
+--Valus
+getgenv().teleport = true
+getgenv().selectisland = "Tiny Island"
+getgenv().autohatch = true
+getgenv().selectcrystal = "Blue Crystal"
+
+--functions
+--[[function mainisland()
+    local args = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args))
+end
+
+function tinyisland()
+    local args = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args))
+end
+
+function frostisland()
+    local args = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args))
+end
+
+function mythicalisland()
+    local args = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args))
+end
+
+function eternalisland()
+    local args = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args))
+end
+
+function legendsisland()
+    local args = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args))
+end
+
+function musclekingisland()
+    local args = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args))
+end]]
+
+function teleport()
+    local args = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")}
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args))
+    local args1 = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")}
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args1))
+    local args2 = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")}
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args2))
+    local args3 = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")}
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args3))
+    local args4 = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")}
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args4))
+    local args5 = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")}
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args5))
+    local args6 = {
+        [1] = "travelToArea",
+        [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")}
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args6))
+end
+
+function autohatch()
+    local args = {
+        [1] = "openCrystal",
+        [2] = "Blue Crystal"}
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openCrystalRemote"):InvokeServer(unpack(args))
+end
+
+--Taps
+local TeleportTab = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998"
+})
+
+local EggsTab = Window:MakeTab({
+	Name = "Eggs",
+	Icon = "rbxassetid://4483345998"
+})
+
+--Buttons
+TeleportTab:AddButton({
+	Name = "Teleport",
+	Callback = function(Value)
+    getgenv().teleport = Value
+    teleport()
+  	end    
+})
+
+EggsTab:AddButton({
+	Name = "Auto Hatch",
+	Callback = function(Value)
+    getgenv().autohatch = Value
+    autohatch()
+  	end
+})
+
+--Dropdowns
+TeleportTab:AddDropdown({
+	Name = "Select Island",
+	Default = "Tiny Island",
+	Options = {"Main Island", "Tiny Island", "Frost Island", "Mythical Island","Eternal Island","Legends Island","Muscleking Island",},
+	Callback = function(Value)
+    getgenv().selectisland = Value
+    print(getgenv().selectisland)
+	end
+})
+
+TeleportTab:AddDropdown({
+	Name = "Select Egg",
+	Default = "Blue Crystal",
+	Options = {"Blua Crystal",},
+	Callback = function(Value)
+    getgenv().autohatch = Value
+    print(getgenv().selectcrystal)
+	end
+})
+
+
+end
+OrionLib:Init()
