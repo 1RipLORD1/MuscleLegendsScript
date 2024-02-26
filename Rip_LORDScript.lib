@@ -76,7 +76,7 @@ function teleport()
     local args = {
         [1] = "travelToArea",
         [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")}
-    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(unpack(args))
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("areaTravelRemote"):InvokeServer(getgenv().teleport(args))
     local args1 = {
         [1] = "travelToArea",
         [2] = workspace:WaitForChild("areaCircles"):WaitForChild("areaCircle")}
